@@ -82,9 +82,9 @@ class Apple(GameObject):
             x = randint(0, GRID_WIDTH - 1)
             y = randint(0, GRID_HEIGHT - 1)
             x, y = x * GRID_SIZE, y * GRID_SIZE
-            new_position = (x, y)
-            if new_position not in occupied_positions:
-                self.position = new_position
+            self.position = (x, y)
+
+            if self.position not in occupied_positions:
                 break
 
     def draw(self):
